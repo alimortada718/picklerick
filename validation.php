@@ -10,7 +10,7 @@ if (isset($_POST["submit"])) {
     $md5password = md5($password);
 
     if ($row['username'] == $fag  && $row['password'] == $md5password) {
-        header("location:storage.php");
+        header("location:scratch.php");
     } else {
         header("location:index.php?wrong='2'");
     }
