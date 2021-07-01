@@ -1,5 +1,5 @@
 <?php
-include "include/db.php";
+include "includes/db.php";
 if (isset($_POST["submit"])) {
     $fag = $_POST["fag"];
     $password = $_POST["password"];
@@ -7,8 +7,9 @@ if (isset($_POST["submit"])) {
     $result = mysqli_query($conn, $sql);
     $row = mysqli_fetch_assoc($result);
 
+    $md5password = md5($password);
 
-    if ($row['username'] == $fag  && $row['password']) {
+    if ($row['username'] == $fag  && $row['password'] == $md5password) {
         header("location:storage.php");
     } else {
         header("location:index.php?wrong='2'");
