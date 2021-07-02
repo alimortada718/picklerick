@@ -1,20 +1,16 @@
 .body {
-  vertical-align: left;
   border: solid black;
   text-align: center;
-  display: inline-table;
-}
-.tobaccolover {
-  border: solid black;
-  text-align: center;
-  display: inline-table;
-}
-.moneyheist {
-  border: solid black;
-  text-align: center;
-  display: inline-table;
 }
 .button {
   text-align: bottom;
   vertical-align: end;
+}
+.all {
+  border: 1px solid black;
+  display: inline-block;
+}
+.input {
+  margin: 5px;
+  display: block;
 }

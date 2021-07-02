@@ -9,12 +9,11 @@ if (isset($_POST["submit"])) {
     $slot6 = $_POST["slot6"];
     $slot7 = $_POST["slot7"];
     $slot8 = $_POST["slot8"];
-    echo $slot1;
-
-
 
     $sql = "INSERT INTO `scratch`( `slot1`, `slot2`, `slot3`, `slot4`, `slot5`, `slot6`, `slot7`, `slot8`) 
     VALUES ('$slot1','$slot2','$slot3','$slot4','$slot5','$slot6','$slot7','$slot8')";
+    $result = mysqli_query($conn, $sql);
+
     $tobacco1 = $_POST["tobacco1"];
     $tobacco2 = $_POST["tobacco2"];
     $tobacco3 = $_POST["tobacco3"];
@@ -23,31 +22,18 @@ if (isset($_POST["submit"])) {
     $tobacco6 = $_POST["tobacco6"];
     $tobacco7 = $_POST["tobacco7"];
     $tobacco8 = $_POST["tobacco8"];
-    echo $tobacco1;
 
-
-
-    $sql = "INSERT INTO `scratch`( `tobacco1`, `tobacco2`, `tobacco3`, `tobacco4`, `tobacco5`, `tobacco6`, `tobacco7`, `tobacco8`) 
+    $sql = "INSERT INTO `tobacco`( `tobacco1`, `tobacco2`, `tobacco3`, `tobacco4`, `tobacco5`, `tobacco6`, `tobacco7`, `tobacco8`) 
     VALUES ('$tobacco1','$tobacco2','$tobacco3','$tobacco4','$tobacco5','$tobacco6','$tobacco7','$tobacco8')";
+    $result = mysqli_query($conn, $sql);
 
-    $tobacco1 = $_POST["tobacco1"];
-    $tobacco2 = $_POST["tobacco2"];
-    $tobacco3 = $_POST["tobacco3"];
-    $tobacco4 = $_POST["tobacco4"];
-    echo $tobacco1;
+    $safe1 = $_POST["safe1"];
+    $safe2 = $_POST["safe2"];
+    $safe3 = $_POST["safe3"];
+    $safe4 = $_POST["safe4"];
 
-
-
-    $sql = "INSERT INTO `scratch`( `safe1`, `safe2`, `safe3`, `safe4`)
+    $sql = "INSERT INTO `safe`( `safe1`, `safe2`, `safe3`, `safe4`)
 VALUES ('$safe1','$safe2','$safe3','$safe4')";
-
-    echo $safe1;
-
-
-
-
-
-
 
     $result = mysqli_query($conn, $sql);
 }
