@@ -1,4 +1,9 @@
 <?php
+session_start();
+if ($_SESSION["loggedin"] != 1) {
+    header("location:index.php");
+}
+$user = $_SESSION["user"];
 include "includes/db.php";
 if (isset($_POST["submit"])) {
     $slot1 = $_POST["slot1"];
@@ -10,8 +15,8 @@ if (isset($_POST["submit"])) {
     $slot7 = $_POST["slot7"];
     $slot8 = $_POST["slot8"];
 
-    $sql = "INSERT INTO `scratch`( `slot1`, `slot2`, `slot3`, `slot4`, `slot5`, `slot6`, `slot7`, `slot8`) 
-    VALUES ('$slot1','$slot2','$slot3','$slot4','$slot5','$slot6','$slot7','$slot8')";
+    $sql = "INSERT INTO `scratch`( `user`,`slot1`, `slot2`, `slot3`, `slot4`, `slot5`, `slot6`, `slot7`, `slot8`) 
+    VALUES ('$user','$slot1','$slot2','$slot3','$slot4','$slot5','$slot6','$slot7','$slot8')";
     $result = mysqli_query($conn, $sql);
 
     $tobacco1 = $_POST["tobacco1"];
@@ -23,8 +28,8 @@ if (isset($_POST["submit"])) {
     $tobacco7 = $_POST["tobacco7"];
     $tobacco8 = $_POST["tobacco8"];
 
-    $sql = "INSERT INTO `tobacco`( `tobacco1`, `tobacco2`, `tobacco3`, `tobacco4`, `tobacco5`, `tobacco6`, `tobacco7`, `tobacco8`) 
-    VALUES ('$tobacco1','$tobacco2','$tobacco3','$tobacco4','$tobacco5','$tobacco6','$tobacco7','$tobacco8')";
+    $sql = "INSERT INTO `tobacco`(`user`, `tobacco1`, `tobacco2`, `tobacco3`, `tobacco4`, `tobacco5`, `tobacco6`, `tobacco7`, `tobacco8`) 
+    VALUES ('$user','$tobacco1','$tobacco2','$tobacco3','$tobacco4','$tobacco5','$tobacco6','$tobacco7','$tobacco8')";
     $result = mysqli_query($conn, $sql);
 
     $safe1 = $_POST["safe1"];
@@ -32,8 +37,8 @@ if (isset($_POST["submit"])) {
     $safe3 = $_POST["safe3"];
     $safe4 = $_POST["safe4"];
 
-    $sql = "INSERT INTO `safe`( `safe1`, `safe2`, `safe3`, `safe4`)
-VALUES ('$safe1','$safe2','$safe3','$safe4')";
+    $sql = "INSERT INTO `safe`(`user`, `safe1`, `safe2`, `safe3`, `safe4`)
+VALUES ('$user','$safe1','$safe2','$safe3','$safe4')";
 
     $result = mysqli_query($conn, $sql);
 }
