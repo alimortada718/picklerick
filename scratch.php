@@ -63,6 +63,21 @@
     </div>
 </div>
 </div>
+<div class="moneyheist">
+    <h3 style="background-color:green;">SAFE</h3>
+
+    <input type="text" id="safe1" name="safe1" placeholder="safe1">
+
+    <div>
+        <input type="text" id="safe2" name="safe2" placeholder="safe2">
+    </div>
+    <div>
+        <input type="text" id="safe3" name="safe3" placeholder="safe3">
+    </div>
+    <div>
+        <input type="text" id="safe4" name="safe4" placeholder="safe4">
+    </div>
+</div>
 
 
 
@@ -88,7 +103,7 @@
 
 
 
-<div>
+<div class="button">
     <input type="submit" name="submit" value="submit">
 </div>
 
@@ -97,6 +112,6 @@
 
 
 
-</div>
+
 
 </html>

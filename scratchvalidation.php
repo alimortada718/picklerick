@@ -13,8 +13,8 @@ if (isset($_POST["submit"])) {
 
 
 
-    $sql = "INSERT INTO `scratch`( `tobacco1`, `tobacco2`, `tobacco3`, `tobacco4`, `tobacco5`, `tobacco6`, `tobacco7`, `tobacco8`) 
-    VALUES ('$tobacco1','$tobacco2','$tobacco3','$tobacco4','$tobacco5','$tobacco6','$tobacco7','$tobacco8')";
+    $sql = "INSERT INTO `scratch`( `slot1`, `slot2`, `slot3`, `slot4`, `slot5`, `slot6`, `slot7`, `slot8`) 
+    VALUES ('$slot1','$slot2','$slot3','$slot4','$slot5','$slot6','$slot7','$slot8')";
     $tobacco1 = $_POST["tobacco1"];
     $tobacco2 = $_POST["tobacco2"];
     $tobacco3 = $_POST["tobacco3"];
@@ -30,8 +30,18 @@ if (isset($_POST["submit"])) {
     $sql = "INSERT INTO `scratch`( `tobacco1`, `tobacco2`, `tobacco3`, `tobacco4`, `tobacco5`, `tobacco6`, `tobacco7`, `tobacco8`) 
     VALUES ('$tobacco1','$tobacco2','$tobacco3','$tobacco4','$tobacco5','$tobacco6','$tobacco7','$tobacco8')";
 
+    $tobacco1 = $_POST["tobacco1"];
+    $tobacco2 = $_POST["tobacco2"];
+    $tobacco3 = $_POST["tobacco3"];
+    $tobacco4 = $_POST["tobacco4"];
+    echo $tobacco1;
 
 
+
+    $sql = "INSERT INTO `scratch`( `safe1`, `safe2`, `safe3`, `safe4`)
+VALUES ('$safe1','$safe2','$safe3','$safe4')";
+
+    echo $safe1;
 
 
 
