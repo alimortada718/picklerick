@@ -1,19 +1,8 @@
 <?php
 session_start();
-include("db.php");
-include("function.php");
-$user_data = $check_login($con);
-
-
+include("includes/db.php");
 
 ?>
-
-
-
-
-
-
-
 
 <!DOCTYPE html>
 <html>
@@ -38,20 +27,10 @@ $user_data = $check_login($con);
                     <a href="signup.php">SIGNUP</a>
                 </div>
             </div>
+
+        </form>
     </div>
 
-
-
-
-
-    </form>
 </div>
-
-
-
-
-
-
-
 
 </html>
