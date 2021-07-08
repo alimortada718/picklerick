@@ -32,6 +32,8 @@ $label3 = array('id', 'user', 'date', 'safe1', 'safe2', 'safe3', 'safe4');
 </header>
 <div class="body">
     <div class="all">
+        <h3 style="background-color:yellow;">Shelf</h3>
+
         <?php
 
 
@@ -67,6 +69,8 @@ $label3 = array('id', 'user', 'date', 'safe1', 'safe2', 'safe3', 'safe4');
 
 
     <div class="all">
+        <h3 style="background-color:powderblue;">Tobacco</h3>
+
         <?php
 
 
@@ -103,6 +107,8 @@ $label3 = array('id', 'user', 'date', 'safe1', 'safe2', 'safe3', 'safe4');
 
 
     <div class="all">
+        <h3 style="background-color:green;">SAFE</h3>
+
         <?php
 
 

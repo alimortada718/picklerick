@@ -15,18 +15,13 @@ include("includes/db.php");
         <h1> THE SIGNUP FORM</h1>
 
         <form class="form" action="usersignup.php" method="post">
-            <div>
-                <input id="text" id="fag" name="fag" placeholder="firstname"><br><br>
-            </div>
-            <div>
-                <input id="text" name="password" placeholder="password"><br><br>
-            </div>
-            <div>
-                <input type="button" name="submit" value="signup">
-                <div id="thesign">
+            <input id="text" id="fag" name="fag" placeholder="firstname"><br><br>
+            <input id="text" name="password" placeholder="password"><br><br>
+            <input type="submit" name="submit" value="signup">
+
+            <!-- <div id="thesign">
                     <a href="index.php"> CLICK TO LOGIN</a>
-                </div>
-            </div>
+                </div> -->
         </form>
 
     </div>

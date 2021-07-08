@@ -22,7 +22,7 @@ include("includes/db.php");
                 <input id="text" name="password" placeholder="password"><br><br>
             </div>
             <div>
-                <input type="button" name="submit" value="login">
+                <input type="submit" name="submit" value="login">
                 <div id="thesign">
                     <a href="signup.php">SIGNUP</a>
                 </div>
