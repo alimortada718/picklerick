@@ -21,8 +21,7 @@ $sql3 = "SELECT * FROM safe";
 $result3 = mysqli_query($conn, $sql3);
 $row3 = mysqli_fetch_assoc($result3);
 $label3 = array('id', 'user', 'date', 'safe1', 'safe2', 'safe3', 'safe4');
-
-
+var_dump($row);
 ?>
 
 <!DOCTYPE html>
@@ -35,7 +34,6 @@ $label3 = array('id', 'user', 'date', 'safe1', 'safe2', 'safe3', 'safe4');
         <h3 style="background-color:yellow;">Shelf</h3>
 
         <?php
-
 
         foreach ($label as $ro) {
 
@@ -52,7 +50,6 @@ $label3 = array('id', 'user', 'date', 'safe1', 'safe2', 'safe3', 'safe4');
 
         <?php
 
-
         foreach ($row as $ro) {
 
         ?>
@@ -65,14 +62,10 @@ $label3 = array('id', 'user', 'date', 'safe1', 'safe2', 'safe3', 'safe4');
         ?>
     </div>
 
-
-
-
     <div class="all">
         <h3 style="background-color:powderblue;">Tobacco</h3>
 
         <?php
-
 
         foreach ($label2 as $ro) {
 
@@ -89,7 +82,6 @@ $label3 = array('id', 'user', 'date', 'safe1', 'safe2', 'safe3', 'safe4');
 
         <?php
 
-
         foreach ($row2 as $ro) {
 
         ?>
@@ -102,15 +94,10 @@ $label3 = array('id', 'user', 'date', 'safe1', 'safe2', 'safe3', 'safe4');
         ?>
     </div>
 
-
-
-
-
     <div class="all">
         <h3 style="background-color:green;">SAFE</h3>
 
         <?php
-
 
         foreach ($label3 as $ro) {
 
@@ -127,7 +114,6 @@ $label3 = array('id', 'user', 'date', 'safe1', 'safe2', 'safe3', 'safe4');
 
         <?php
 
-
         foreach ($row3 as $ro) {
 
         ?>
@@ -139,7 +125,6 @@ $label3 = array('id', 'user', 'date', 'safe1', 'safe2', 'safe3', 'safe4');
         }
         ?>
     </div>
-
 
 </div>
 
