@@ -7,6 +7,7 @@ if ($_SESSION["loggedin"] != 1) {
 }
 
 include "includes/db.php";
+include "function.php";
 $sql = "SELECT * FROM scratch";
 $result = mysqli_query($conn, $sql);
 $row = mysqli_fetch_assoc($result);
@@ -21,7 +22,7 @@ $sql3 = "SELECT * FROM safe";
 $result3 = mysqli_query($conn, $sql3);
 $row3 = mysqli_fetch_assoc($result3);
 $label3 = array('id', 'user', 'date', 'safe1', 'safe2', 'safe3', 'safe4');
-var_dump($row);
+//var_dump($row);
 ?>
 
 <!DOCTYPE html>
@@ -35,30 +36,15 @@ var_dump($row);
 
         <?php
 
-        foreach ($label as $ro) {
+        label($label);
 
-        ?>
-        <?php
-            echo $ro;
-            ?>
-        </br>
-        <?php
-        }
+
         ?>
     </div>
     <div class="all">
 
         <?php
-
-        foreach ($row as $ro) {
-
-        ?>
-        <?php
-            echo $ro;
-            ?>
-        </br>
-        <?php
-        }
+        label($row);
         ?>
     </div>
 
@@ -66,31 +52,14 @@ var_dump($row);
         <h3 style="background-color:powderblue;">Tobacco</h3>
 
         <?php
-
-        foreach ($label2 as $ro) {
-
-        ?>
-        <?php
-            echo $ro;
-            ?>
-        </br>
-        <?php
-        }
+        label($label2);
         ?>
     </div>
     <div class="all">
 
         <?php
 
-        foreach ($row2 as $ro) {
-
-        ?>
-        <?php
-            echo $ro;
-            ?>
-        </br>
-        <?php
-        }
+        label($row2);
         ?>
     </div>
 
@@ -98,31 +67,16 @@ var_dump($row);
         <h3 style="background-color:green;">SAFE</h3>
 
         <?php
+        label($label3);
 
-        foreach ($label3 as $ro) {
 
-        ?>
-        <?php
-            echo $ro;
-            ?>
-        </br>
-        <?php
-        }
+
         ?>
     </div>
     <div class="all">
 
         <?php
-
-        foreach ($row3 as $ro) {
-
-        ?>
-        <?php
-            echo $ro;
-            ?>
-        </br>
-        <?php
-        }
+        label($row3);
         ?>
     </div>
 
