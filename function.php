@@ -2,16 +2,29 @@
 
 
 
+function shit($label1)
+{
+
+    foreach ($label1 as $row) {
+        foreach ($row as $ro) { ?>
+<?php
+            echo $ro;
+            ?>
+</br>
+<?php
+        }
+    }
+}
 function label($label1)
 {
 
-    foreach ($label1 as $ro) {
-
-?>
+    foreach ($label1 as $row) {
+        ?>
 <?php
-        echo $ro;
+        echo $row;
         ?>
 </br>
 <?php
+
     }
 }

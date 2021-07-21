@@ -23,9 +23,6 @@ include("includes/db.php");
             </div>
             <div>
                 <input type="submit" name="submit" value="login">
-                <div id="thesign">
-                    <a href="signup.php">SIGNUP</a>
-                </div>
             </div>
 
         </form>

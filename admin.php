@@ -5,24 +5,21 @@ session_start();
 if ($_SESSION["loggedin"] != 1) {
     header("location:index.php");
 }
-
+//  DONT FORGET TO CLOSE YOU LINE ;
 include "includes/db.php";
 include "function.php";
-$sql = "SELECT * FROM scratch";
-$result = mysqli_query($conn, $sql);
-$row = mysqli_fetch_assoc($result);
-$label = array('id', 'date', 'user', 'slot1', 'slot2', 'slot3', 'slot4', 'slot5', 'slot6', 'slot7', 'slot8');
 
-$sql2 = "SELECT * FROM tobacco";
-$result2 = mysqli_query($conn, $sql2);
-$row2 = mysqli_fetch_assoc($result2);
-$label2 = array('id', 'date', 'user', 'tobacco1', 'tobacco2', 'tobacco3', 'tobacco4', 'tobacco5', 'tobacco6', 'tobacco7', 'tobacco8');
+$sql = "SELECT date,username,safe1,safe2,scratch1,scratch2 ,tobacco1,tobacco2 FROM `report`";
 
-$sql3 = "SELECT * FROM safe";
-$result3 = mysqli_query($conn, $sql3);
-$row3 = mysqli_fetch_assoc($result3);
-$label3 = array('id', 'user', 'date', 'safe1', 'safe2', 'safe3', 'safe4');
-//var_dump($row);
+$result =  mysqli_query($conn, $sql);
+$report = mysqli_fetch_all($result);
+
+$label = array('date', 'username', 'safe1', 'safe2', 'scratch1', 'scratch2 ', 'tobacco1', 'tobacco2');
+
+// echo "<pre>";
+// var_dump($report);
+// echo "</pre>";
+
 ?>
 
 <!DOCTYPE html>
@@ -32,52 +29,22 @@ $label3 = array('id', 'user', 'date', 'safe1', 'safe2', 'safe3', 'safe4');
 </header>
 <div class="body">
     <div class="all">
-        <h3 style="background-color:yellow;">Shelf</h3>
-
+        <h3 style="background-color:yellow;">Shelf</h3> -->
         <?php
 
         label($label);
 
-
         ?>
     </div>
     <div class="all">
 
         <?php
-        label($row);
+        shit($report);
         ?>
     </div>
 
-    <div class="all">
-        <h3 style="background-color:powderblue;">Tobacco</h3>
-
-        <?php
-        label($label2);
-        ?>
-    </div>
-    <div class="all">
-
-        <?php
-
-        label($row2);
-        ?>
-    </div>
-
-    <div class="all">
-        <h3 style="background-color:green;">SAFE</h3>
-
-        <?php
-        label($label3);
-
-
-
-        ?>
-    </div>
-    <div class="all">
-
-        <?php
-        label($row3);
-        ?>
+    <div id="thesign">
+        <a href="signup.php">SIGNUP</a>
     </div>
 
 </div>

@@ -1,34 +1,81 @@
 <?php
-include "temp2.php";
-$gaga = 6;
-$fart = 7;
-$kaka = array("val1", "val2");
-$pepe = array("ba" => "shit", "lg" => "piss");
-$mythird = array("ba" => "dfgrtyu", "lg" => "sdfghj");
 
+session_start();
 
-function dogshit($val1, $val2)
-{
-
-    $sum = $val1 + $val2;
-    echo $sum;
+if ($_SESSION["loggedin"] != 1) {
+    header("location:index.php");
 }
+//  DONT FORGET TO CLOSE YOU LINE ;
+include "includes/db.php";
+include "function.php";
 
+$sql = "SELECT date,username,safe1,safe2,scratch1,scratch2 ,tobacco1,tobacco2 FROM `report`";
 
+$result =  mysqli_query($conn, $sql);
+$report = mysqli_fetch_all($result);
 
-dogshit($gaga, $fart);
-echo '</br>';
+$label = array('date', 'username', 'safe1', 'safe2', 'scratch1', 'scratch2 ', 'tobacco1', 'tobacco2');
 
-banshee($gaga, "99");
-echo '</br>';
+// echo "<pre>";
+// //var_dump($report);
+// echo "</pre>";
 
-quit($kaka);
-echo '</br>';
-quit($pepe);
-echo '</br>';
-quit($mythird);
-echo '</br>';
-ma($kaka);
-echo '</br>';
-mn();
-echo '</br>';
+?>
+
+<!DOCTYPE html>
+<html>
+<header>
+    <link rel="stylesheet" href="css/style.css">
+</header>
+<div class="body">
+    <div class="all">
+        <h3 style="background-color:yellow;">Shelf</h3> -->
+        <?php
+
+        label($label);
+
+        ?>
+    </div>
+    <div class="all">
+
+        <?php
+        label($row);
+        ?>
+    </div>
+
+    <div class="all">
+        <h3 style="background-color:powderblue;">Tobacco</h3>
+
+        <?php
+        label($label2);
+        ?>
+    </div>
+    <div class="all">
+
+        <?php
+
+        label($row2);
+        ?>
+    </div>
+
+    <div class="all">
+        <h3 style="background-color:green;">SAFE</h3>
+
+        <?php
+        label($label3);
+
+        ?>
+    </div>
+    <div class="all">
+
+        <?php
+        label($row3);
+        ?>
+    </div>
+    <div id="thesign">
+        <a href="signup.php">SIGNUP</a>
+    </div>
+
+</div>
+
+</html>
