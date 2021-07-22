@@ -8,6 +8,10 @@ $insert = mysqli_query($conn, $sql);
 $sql = "SELECT * FROM users WHERE un = '$username'";
 $result =  mysqli_query($conn, $sql);
 $row = mysqli_fetch_assoc($result);
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+$sql = "SELECT col1,col2 FROM `report`";
+
+
 $md5password = md5($password);
 
 

@@ -1,5 +1,6 @@
 .body {
   text-align: center;
+  display: inline-block;
 }
 .button {
   text-align: bottom;
@@ -8,7 +9,6 @@
 .all {
   display: inline-block;
   border: 1px solid black;
-  vertical-align: bottom;
 }
 .input {
   margin: 5px;
@@ -29,11 +29,7 @@
 #thesign {
   text-align: end;
 }
-#table {
-  border: 1px solid black;
-  column-count: 3;
-  column-fill: auto;
-  text-align: center;
-  vertical-align: top;
+.dior {
   display: inline-block;
+  border: 1px solid black;
 }

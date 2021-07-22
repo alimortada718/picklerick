@@ -27,25 +27,24 @@ $label = array('date', 'username', 'safe1', 'safe2', 'scratch1', 'scratch2 ', 't
 <header>
     <link rel="stylesheet" href="css/style.css">
 </header>
-<div class="body">
-    <div class="all">
-        <h3 style="background-color:yellow;">Shelf</h3> -->
-        <?php
+<div class="all">
+    <?php
 
-        label($label);
+    label($label);
 
-        ?>
-    </div>
-    <div class="all">
+    ?>
+</div>
 
-        <?php
-        shit($report);
-        ?>
-    </div>
+<div id="table">
 
-    <div id="thesign">
-        <a href="signup.php">SIGNUP</a>
-    </div>
+    <?php
+    shit($report);
+    ?>
+</div>
+
+<div id="thesign">
+    <a href="signup.php">SIGNUP</a>
+</div>
 
 </div>
 
