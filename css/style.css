@@ -28,11 +28,10 @@
 }
 #thesign {
   text-align: end;
-  text-align: ;
 }
 #table {
   border: 1px solid black;
-  column-count: 3;
+  column-count: 4;
   column-fill: auto;
   text-align: center;
   display: inline-block;
