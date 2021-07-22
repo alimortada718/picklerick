@@ -28,12 +28,12 @@
 }
 #thesign {
   text-align: end;
+  text-align: ;
 }
 #table {
   border: 1px solid black;
   column-count: 3;
   column-fill: auto;
   text-align: center;
-  vertical-align: top;
   display: inline-block;
 }
