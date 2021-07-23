@@ -6,9 +6,7 @@
   vertical-align: end;
 }
 .all {
-  display: inline-block;
   border: 1px solid black;
-  vertical-align: bottom;
 }
 .input {
   margin: 5px;
@@ -31,8 +29,7 @@
 }
 #table {
   border: 1px solid black;
-  column-count: 4;
-  column-fill: auto;
-  text-align: center;
-  display: inline-block;
+}
+.dot {
+  border: 1px solid green;
 }

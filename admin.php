@@ -9,16 +9,24 @@ if ($_SESSION["loggedin"] != 1) {
 include "includes/db.php";
 include "function.php";
 
-$sql = "SELECT date,username,safe1,safe2,scratch1,scratch2 ,tobacco1,tobacco2 FROM `report`";
+$date = date('Y-m-d');
+
+
+$sql = "SELECT date,username,shift,safe1,safe2,scratch1,scratch2 ,tobacco1,tobacco2 FROM `report` WHERE date ='$date'";
 
 $result =  mysqli_query($conn, $sql);
 $report = mysqli_fetch_all($result);
 
-$label = array('date', 'username', 'safe1', 'safe2', 'scratch1', 'scratch2 ', 'tobacco1', 'tobacco2');
-
+$label = array('date', 'username', 'shift', 'safe1', 'safe2', 'scratch1', 'scratch2 ', 'tobacco1', 'tobacco2');
 // echo "<pre>";
 // var_dump($report);
 // echo "</pre>";
+
+
+?>
+<?php
+$date = $_POST["date"];
+
 
 ?>
 
@@ -27,20 +35,26 @@ $label = array('date', 'username', 'safe1', 'safe2', 'scratch1', 'scratch2 ', 't
 <header>
     <link rel="stylesheet" href="css/style.css">
 </header>
+<form action="#" method="post">
+    <label>date:</label>
+    <input type='date' name='date'></br></br>
+    <input type="submit"></br>
+</form>
+
 <div class="all">
-    <?php
+    <table>
+        <?php
 
-    label($label);
+        label($label);
 
-    ?>
+
+        shit($report);
+        ?>
+    </table>
+
 </div>
 
-<div id="table">
 
-    <?php
-    shit($report);
-    ?>
-</div>
 
 <div id="thesign">
     <a href="signup.php">SIGNUP</a>

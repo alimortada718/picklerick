@@ -1,30 +1,49 @@
 <?php
 
-
-
 function shit($label1)
 {
 
     foreach ($label1 as $row) {
-        foreach ($row as $ro) { ?>
-<?php
-            echo $ro;
+?>
+<tr>
+    <?php
+
+            foreach ($row as $ro) {
             ?>
-</br>
-<?php
-        }
+    <td class="all">
+        <?php
+                    echo $ro;
+                    ?>
+    </td>
+    <?php
+
+            }
+            ?>
+<tr>
+    <?php
+
     }
 }
+
 function label($label1)
 {
-
-    foreach ($label1 as $row) {
         ?>
-<?php
-        echo $row;
-        ?>
-</br>
-<?php
+<tr>
+    <?php
 
-    }
+            foreach ($label1 as $row) {
+            ?>
+    <th class="dot">
+        <?php
+                    echo $row;
+                    ?>
+    </th>
+    <?php
+
+            }
+
+            ?>
+
+</tr>
+<?php
 }

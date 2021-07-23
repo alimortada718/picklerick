@@ -12,7 +12,7 @@ if (isset($_POST["submit"])) {
     $tobacco2 = $_POST["tobacco2"];
     $safe1 = $_POST["safe1"];
     $safe2 = $_POST["safe2"];
-
+    $shift = $_POST["shift"];
 
     // $slot3 = $_POST["slot3"];
     // $slot4 = $_POST["slot4"];
@@ -21,8 +21,8 @@ if (isset($_POST["submit"])) {
     // $slot7 = $_POST["slot7"];
     // $slot8 = $_POST["slot8"];
 
-    $sql = "INSERT INTO `report`( `username`,`scratch1`, `scratch2`,`tobacco1`, `tobacco2`,`safe1`, `safe2`) 
-    VALUES ('$user','$slot1','$slot2','$tobacco1','$tobacco2','$safe1','$safe2')";
+    $sql = "INSERT INTO `report`( `username`,`shift`,`scratch1`, `scratch2`,`tobacco1`, `tobacco2`,`safe1`, `safe2`) 
+    VALUES ('$user','$shift','$slot1','$slot2','$tobacco1','$tobacco2','$safe1','$safe2')";
     $result = mysqli_query($conn, $sql);
 
     // $tobacco1 = $_POST["tobacco1"];
@@ -39,6 +39,5 @@ if (isset($_POST["submit"])) {
     // $safe2 = $_POST["safe2"];
     // // $safe3 = $_POST["safe3"];
     // // $safe4 = $_POST["safe4"];
-
-
+    header("location:index.php");
 }

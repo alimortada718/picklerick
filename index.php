@@ -14,7 +14,10 @@ include("includes/db.php");
         <img src="images/jimlogo.png" height="45px">
         <img src="images/ALILOGO.png" height="65px">
 
+
         <form class="form" action="validation.php" method="post">
+
+
             <div>
                 <input id="text" id="fag" name="fag" placeholder="firstname"><br><br>
             </div>

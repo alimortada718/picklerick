@@ -13,6 +13,16 @@ if ($_SESSION["loggedin"] != 1) {
 </header>
 <div class="body">
     <form class="form" action="scratchvalidation.php" method="post">
+        <div>
+            <select name="shift">
+                <option value="1open">Shift 1 OPEN</option>
+                <option value="1close">Shift 1 close</option>
+                <option value="2open">Shift 2OPEN</option>
+                <option value="2close">Shift 2 close</option>
+                <option value="3open">Shift 3 OPEN</option>
+                <option value="3close">Shift 3 close</option>
+            </select>
+        </div>
         <div class="all">
             <div>
                 <h3 style="background-color:yellow;">Shelf</h3>
