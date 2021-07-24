@@ -8,13 +8,13 @@ if ($_SESSION["loggedin"] != 1) {
 //  DONT FORGET TO CLOSE YOU LINE ;
 include "includes/db.php";
 include "function.php";
-$date = date('Y-m-d');
-echo ($date);
 if (isset($_POST['submit'])) {
-    $data = $_POST['date'];
+    $date = $_POST['date'];
 } else {
     $date = date('date');
+    $date = date('Y-m-d');
 }
+echo ($date);
 
 
 
