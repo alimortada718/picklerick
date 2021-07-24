@@ -9,7 +9,11 @@ if ($_SESSION["loggedin"] != 1) {
 include "includes/db.php";
 include "function.php";
 
-$date = $_POST["date"];
+if (isset($_POST['submit'])) {
+    $data = $_POST['date'];
+} else {
+    $date = date('date');
+}
 
 
 $sql = "SELECT date,username,shift,safe1,safe2,scratch1,scratch2 ,tobacco1,tobacco2 FROM `report` WHERE date ='$date'";
@@ -22,10 +26,6 @@ $label = array('date', 'username', 'shift', 'safe1', 'safe2', 'scratch1', 'scrat
 // var_dump($report);
 // echo "</pre>";
 
-if (isset($_POST['submit'])) {
-    $data = $_POST['date'];
-} else {$date=date()
-}
 
 
 
