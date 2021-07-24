@@ -22,10 +22,14 @@ $label = array('date', 'username', 'shift', 'safe1', 'safe2', 'scratch1', 'scrat
 // var_dump($report);
 // echo "</pre>";
 
-If(isset($_post["submit"]  $date = $_post["date"] ))
-else {
-    header();
+if (isset($_POST['submit'])) {
+    $data = $_POST['date'];
+} else {$date=date()
 }
+
+
+
+
 
 
 
