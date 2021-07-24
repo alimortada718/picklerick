@@ -8,12 +8,14 @@ if ($_SESSION["loggedin"] != 1) {
 //  DONT FORGET TO CLOSE YOU LINE ;
 include "includes/db.php";
 include "function.php";
-
+$date = date('Y-m-d');
+echo ($date);
 if (isset($_POST['submit'])) {
     $data = $_POST['date'];
 } else {
     $date = date('date');
 }
+
 
 
 $sql = "SELECT date,username,shift,safe1,safe2,scratch1,scratch2 ,tobacco1,tobacco2 FROM `report` WHERE date ='$date'";
