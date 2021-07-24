@@ -8,13 +8,14 @@ if ($_SESSION["loggedin"] != 1) {
 //  DONT FORGET TO CLOSE YOU LINE ;
 include "includes/db.php";
 include "function.php";
+
+
+
 if (isset($_POST['submit'])) {
     $date = $_POST['date'];
 } else {
     $date = date('Y-m-d');
 }
-echo ($date);
-echo $_POST['date'];
 
 
 
@@ -45,7 +46,7 @@ $label = array('date', 'username', 'shift', 'safe1', 'safe2', 'scratch1', 'scrat
 <form action="#" method="post">
     <label>date:</label>
     <input type='date' name='date'></br></br>
-    <input type="submit"></br>
+    <input type="submit" name='submit'></br>
 </form>
 
 <div class="all">
