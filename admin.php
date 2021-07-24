@@ -11,10 +11,10 @@ include "function.php";
 if (isset($_POST['submit'])) {
     $date = $_POST['date'];
 } else {
-    $date = date('date');
     $date = date('Y-m-d');
 }
 echo ($date);
+echo $_POST['date'];
 
 
 
