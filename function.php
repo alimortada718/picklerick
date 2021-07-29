@@ -7,7 +7,6 @@ function shit($label1)
 ?>
 <tr>
     <?php
-
             foreach ($row as $ro) {
             ?>
     <td class="all">
@@ -16,7 +15,6 @@ function shit($label1)
                     ?>
     </td>
     <?php
-
             }
             ?>
 <tr>
