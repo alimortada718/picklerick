@@ -70,19 +70,5 @@ $label = array('date', 'username', 'shift', 'safe1', 'safe2', 'scratch1', 'scrat
 </div>
 
 </div>
-<div id="cell1">2</div>
-<div id="cell2">5</div>
-<span id="val"></span>
-
-<script>
-var table = document.getElementById("table"),
-    sumVal = 0;
-for (var i = 1; i < table.cells.length; i++) {
-    sumVal = sumVal + parseInt(table.rows[i].cells[4].innerHTML);
-
-}
-document.getelementbyid("val").innerHTML = "SUM Value=" + sumval;
-console.log(sumVal)
-</script>
 
 </html>

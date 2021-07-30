@@ -6,17 +6,28 @@ function shit($label1)
     foreach ($label1 as $row) {
 ?>
 <tr>
-    <?php
+
+
+
+
+    <?php $i = 0;
             foreach ($row as $ro) {
             ?>
-    <td class="all">
+    <td class="all" id="<?php echo $i
+                                    ?> 
         <?php
-                    echo $ro;
-                    ?>
+                echo $ro;
+        ?>
     </td>
     <?php
+
+                $i += 1;
             }
-            ?>
+
+
+
+
+    ?>
 <tr>
     <?php
 
@@ -25,22 +36,22 @@ function shit($label1)
 
 function label($label1)
 {
-        ?>
+    ?>
 <tr>
     <?php
 
-            foreach ($label1 as $row) {
-            ?>
-    <th class="dot">
+    foreach ($label1 as $row) {
+    ?>
+    <th class=" dot">
         <?php
                     echo $row;
                     ?>
-    </th>
-    <?php
+        </th>
+        <?php
 
             }
 
-            ?>
+                ?>
 
 </tr>
 <?php

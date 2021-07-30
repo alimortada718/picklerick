@@ -1,8 +1,15 @@
 <?php
-$number = 1;
-while ($number == 1) {
-    echo "hi";
-    $number += 1;
-}
+$l = 0;
+for ($k = 0; $k < 10; $k++) {
+    $i = 0;
 
-$sql = "SELECT date,username,shift,safe1,safe2,scratch1,scratch2 ,tobacco1,tobacco2 FROM `report` WHERE date ='$date'";
+    for ($j = 0; $j < 10; $j++) {
+
+        echo $l . $i;
+        echo "</br>";
+        $i += 1;
+    }
+    $i = 0;
+    $l += 2;
+}
+$l = 0;
