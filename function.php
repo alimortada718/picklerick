@@ -47,6 +47,8 @@ function label($label1)
                     echo $row;
                     ?>
         </th>
-        }
+        <?php
+    }
+        ?>
 </tr>
 }
