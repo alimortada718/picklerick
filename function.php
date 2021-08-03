@@ -13,7 +13,7 @@ function shit($label1)
     <?php $i = 0;
             foreach ($row as $ro) {
             ?>
-    <td class="all" id="<?php echo $i
+    <td class="all" id="<?php echo $i;
                                     ?> 
         <?php
                 echo $ro;
@@ -31,8 +31,8 @@ function shit($label1)
 <tr>
     <?php
 
-    }
-}
+    
+
 
 function label($label1)
 {
@@ -47,12 +47,5 @@ function label($label1)
                     echo $row;
                     ?>
         </th>
-        <?php
-
-            }
-
-                ?>
 
 </tr>
-<?php
-}
