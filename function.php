@@ -31,8 +31,8 @@ function shit($label1)
 <tr>
     <?php
 
-    
-
+        }
+    }
 
 function label($label1)
 {
@@ -47,5 +47,6 @@ function label($label1)
                     echo $row;
                     ?>
         </th>
-
+        }
 </tr>
+}
