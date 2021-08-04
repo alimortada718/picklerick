@@ -53,4 +53,3 @@ function label($label1)
 </tr>
 <?php
 }
-    ?>
